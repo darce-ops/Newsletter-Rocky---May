@@ -620,14 +620,14 @@ nav {
 }
 .ig-cambio p { font-size: 13.5px; color: #555; line-height: 1.7; }
 .ig-price-badge {
-  position: absolute;
-  right: 24px;
-  top: 24px;
   background: var(--hot-pink);
   color: white;
   border-radius: 10px;
   padding: 10px 14px;
   text-align: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-left: auto;
 }
 .ig-price-label { font-size: 10px; font-weight: 700; opacity: .85; }
 .ig-price-amount { font-size: 22px; font-weight: 900; }
@@ -1035,11 +1035,8 @@ footer {
     padding: 20px 24px;
   }
   .ig-price-badge {
-    position: relative;
-    right: auto;
-    top: auto;
-    align-self: flex-start;
     order: 1;
+    margin-left: 0;
   }
 
   .flow-box { padding: 20px 24px; }
