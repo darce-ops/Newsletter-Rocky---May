@@ -985,12 +985,30 @@ footer {
   .meta-hero-top img { width: 120px; }
   .meta-hero-body { padding: 24px; }
 
-  .vs-body,
-  .vs-header,
-  .vs-footer { grid-template-columns: 1fr; }
+  .vs-header { grid-template-columns: 1fr 1fr; }
   .vs-logo { display: none; }
+  .vs-col-header.antes { border-radius: 12px 0 0 0; }
+  .vs-col-header.ahora { border-radius: 0 12px 0 0; }
+
+  .vs-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .vs-center-col { display: none; }
+
+  .vs-item {
+    border-top: 1px solid #f0f0f0;
+    padding: 12px 10px;
+  }
+  .vs-item--antes { background: #f8fbff; border-right: 1px solid #f0f0f0; }
+  .vs-item--ahora { background: #fff8fc; }
+  .vs-item-icon { font-size: 20px; }
+  .vs-item-title { font-size: 11px; }
+  .vs-item-desc { font-size: 10px; }
+
+  .vs-footer { grid-template-columns: 1fr 1fr; }
   .vs-footer > div:nth-child(2) { display: none; }
+  .vs-footer-item { margin: 0 8px; font-size: 10px; padding: 8px 10px; text-align: center; }
 
   .funnel-layout { flex-direction: column; }
   .funnel-col { min-width: unset; }
@@ -1015,14 +1033,13 @@ footer {
   .ig-cambio {
     flex-direction: column;
     padding: 20px 24px;
-    padding-top: 60px;
   }
   .ig-price-badge {
     position: relative;
     right: auto;
     top: auto;
     align-self: flex-start;
-    order: -1;
+    order: 1;
   }
 
   .flow-box { padding: 20px 24px; }
@@ -1117,7 +1134,7 @@ footer {
   .beneficia-body { font-size: 13px; }
 
   .ig-hero { padding: 20px 20px; }
-  .ig-cambio { padding: 16px 16px; padding-top: 54px; }
+  .ig-cambio { padding: 16px 16px; }
 
   .flow-box { padding: 16px 14px; }
   .flow-step img { width: 48px; }
